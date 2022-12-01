@@ -1,5 +1,3 @@
-package week12;
-
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -43,17 +41,16 @@ while (phi.gcd(e).compareTo(BigInteger.ONE) > 0 && e.compareTo(phi) < 0)
  RSA rsa = new RSA();
  DataInputStream in = new DataInputStream(System.in);
  String teststring;
-System.out.println("Enter the plain text:");
+System.out.println("Enter the Message to be sent :");
  teststring = in.readLine();
- System.out.println("Encrypting String: " + teststring);
- System.out.println("String in Bytes: "
- + bytesToString(teststring.getBytes()));
+ System.out.println("Sending  Message: " + teststring);
+ System.out.println("Encrypting Message : "+ bytesToString(teststring.getBytes()));
 // encrypt
  byte[] encrypted = rsa.encrypt(teststring.getBytes());
  // decrypt
  byte[] decrypted = rsa.decrypt(encrypted);
- System.out.println("Decrypting Bytes: " + bytesToString(decrypted));
- System.out.println("Decrypted String: " + new String(decrypted));
+ System.out.println("Decrypting Message: " + bytesToString(decrypted));
+ System.out.println("Decrypted Message: " + new String(decrypted));
  }
  private static String bytesToString(byte[] encrypted)
  {
