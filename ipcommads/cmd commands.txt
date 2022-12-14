@@ -1,0 +1,17 @@
+Open Command Prompt and enter the below commands
+
+1. ping
+2. ipconfig
+3. ipconfig/all
+4. ipconfig/renew
+5. ipconfig/release
+6. nbstat -a
+7. arp -a
+8. hostname
+9. ipconfig/flushdns
+10. netdiag
+11. netstat
+12. nslookup
+13. pathping
+14. route
+15. tracert
